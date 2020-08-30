@@ -11,39 +11,34 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>14</java.version>
+        <java.version>11</java.version>
         <skipTests>true</skipTests>
         <maven.javadoc.skip>true</maven.javadoc.skip>
-        <plugin.naming>请输入您的插件包名称</plugin.naming>
-        <plugin.desc>请输入您的插件包描述</plugin.desc>
-        <plugin.version>请输入您的插件包版本号</plugin.version>
-        <plugin.author>请输入您的插件包作者</plugin.author>
-        <plugin.homepage>请输入您的个人站点</plugin.homepage>
-        <plugin.packaging>请输入您的插件包的包名</plugin.packaging>
     </properties>
 
     <dependencies>
+        <!--Spider Dependent-->
         <dependency>
             <groupId>top.codings</groupId>
             <artifactId>websiphon-light</artifactId>
-            <version>0.0.84</version>
+            <version>0.0.88</version>
             <scope>provided</scope>
         </dependency>
-        <!--日志记录依赖-->
+        <!--Log Dependent-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.8.0-alpha2</version>
             <scope>provided</scope>
         </dependency>
-        <!--JavaFx依赖-->
+        <!--JavaFx Dependent-->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>15-ea+7</version>
             <scope>provided</scope>
         </dependency>
-        <!--Lombok依赖-->
+        <!--Lombok Dependent-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -113,16 +108,6 @@
                         </goals>
                         <configuration>
                             <appendAssemblyId>false</appendAssemblyId>
-                            <archive>
-                                <manifestEntries>
-                                    <naming>${plugin.naming}</naming>
-                                    <desc>${plugin.desc}</desc>
-                                    <version>${plugin.version}</version>
-                                    <author>${plugin.author}</author>
-                                    <homepage>${plugin.homepage}</homepage>
-                                    <packaging>${plugin.packaging}</packaging>
-                                </manifestEntries>
-                            </archive>
                             <descriptorRefs>
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
                             </descriptorRefs>
